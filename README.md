@@ -1,6 +1,7 @@
+##### Generated in part by ChatGPT
 # ScriptServe - A Dynamic Nginx Reverse Proxy
 
-ScriptServe is a dynamic Nginx reverse proxy that allows you to serve multiple scripts through a single Nginx instance. Simply add your scripts to the `/etc/scriptserve/scripts` directory and they will be automatically added to Nginx, allowing you to access them by subdomain.
+ScriptServe is a dynamic Nginx reverse proxy that allows you to serve multiple scripts through a single Nginx instance. Simply add your scripts to the `/etc/scriptserve/scripts` directory as mounted by a volume, and they will be automatically added to Nginx, allowing you to access them by subdomain.
 
 ## Features
 
@@ -17,7 +18,7 @@ ScriptServe is a dynamic Nginx reverse proxy that allows you to serve multiple s
 ## Getting Started
 
 1. Clone this repository to your local machine
-2. Run the included Dockerfile to build the image
+2. Run `docker build .` against the included Dockerfile to build the image
 3. Add your scripts to the `/etc/scriptserve/scripts` directory
 4. Start the container
 5. Access your scripts by subdomain, with the format `{script_name}.script`
