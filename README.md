@@ -32,7 +32,7 @@ ScriptServe is a dynamic Nginx reverse proxy that allows you to serve multiple s
 
 ## Known Issues
 
-- If two filenames are the same except for the extensions, it breaks. However, a workaround is to simply change the extension to .ext.2 because it only pays attention to the text within the file and the file extension does not matter, as it will be changed to .script anyway.
+- If two filenames are the same except for the extensions, it breaks. However, a workaround is to simply change the extension to filename2.ext.
 
 ## Contributing
 
