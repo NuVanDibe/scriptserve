@@ -1,12 +1,14 @@
+
 ##### Generated in part by ChatGPT
 # ScriptServe - A Dynamic Nginx Reverse Proxy
 
 ScriptServe is a dynamic Nginx reverse proxy that allows you to serve multiple scripts through a single Nginx instance. Simply add your scripts to the `/etc/scriptserve/scripts` directory as mounted by a volume, and they will be automatically added to Nginx, allowing you to access them by subdomain.
 
-## But why?
-Short answer, I want to be able to curl scripts off a local server more easily. If I want my custom arch setup script, I just need to type `curl archsetup.script | bash` and the rest just goes.
+## Why use ScriptServe?
 
-Long answer, aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabecause why not?
+- Short answer: To be able to curl scripts off a local server more easily. For example, to run your custom arch setup script, simply type `curl archsetup.script | bash`.
+
+- Long answer: Why not? It's a convenient tool that makes it easier to access scripts on a local server.
 
 ## Features
 
@@ -28,6 +30,10 @@ Long answer, aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 4. Start the container
 5. Access your scripts by subdomain, with the format `{script_name}.script`
 
+## Known Issues
+
+- If two filenames are the same except for the extensions, it breaks. However, a workaround is to simply change the extension to .ext.2 because it only pays attention to the text within the file and the file extension does not matter, as it will be changed to .script anyway.
+
 ## Contributing
 
 We welcome contributions from the community! If you have an idea for a new feature or a bug fix, please open a pull request.
@@ -35,3 +41,4 @@ We welcome contributions from the community! If you have an idea for a new featu
 ## License
 
 ScriptServe is released under the [MIT License](https://opensource.org/licenses/MIT).
+
