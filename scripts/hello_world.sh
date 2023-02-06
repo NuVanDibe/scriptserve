@@ -1,5 +1,5 @@
 #!/bin/bash
-# description This is just a little hello world script that demonstrates the usage of scriptserve, available at https://github.com/NuVanDibe/scriptserve/
+# description: This is just a little hello world script that demonstrates the usage of scriptserve, available at https://github.com/NuVanDibe/scriptserve/
 
 echo Hello world!
 echo
