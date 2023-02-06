@@ -6,9 +6,9 @@ ScriptServe is a dynamic Nginx reverse proxy that allows you to serve multiple s
 
 ## Why use ScriptServe?
 
-- Short answer: To be able to curl scripts off a local server more easily. For example, to run your custom arch setup script, simply type `curl archsetup.script | bash`.
+- Long answer: To be able to curl scripts off a local server more easily. For example, to run your custom arch setup script, simply type `curl archsetup.script | bash`.
 
-- Long answer: Why not? It's a convenient tool that makes it easier to access scripts on a local server.
+- Short answer: Why not? It's a convenient tool that makes it easier to access scripts on a local server.
 
 ## Features
 
